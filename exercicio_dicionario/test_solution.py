@@ -1,7 +1,7 @@
 from solution import primeiras_ocorrencias
 import pytest
 
-def test_answer():
+def teste_ocorrencias():
 
     # Casos -> Dicionário que guarda os testes e suas informações.
     # A estrutura foi pensada para que a adição e remoção de testes seja rápida e não exija trabalho.
