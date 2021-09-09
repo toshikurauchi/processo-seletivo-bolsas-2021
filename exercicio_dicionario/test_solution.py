@@ -41,5 +41,5 @@ class TestSolution:
     def test_space(self):
         entry = 'asd  fgh '
         response = primeiras_ocorrencias(entry)
-        hit = {'a': 0, 's': 1, 'd': 2, ' ': 3, 'f': 5, 'g': 6, 'h':7}
+        hit = {'a': 0, 's': 1, 'd': 2, ' ': 3, 'f': 5, 'g': 6, 'h': 7}
         assert hit == response
