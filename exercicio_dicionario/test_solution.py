@@ -86,6 +86,10 @@ def test_answer():
             'arg': 'AaAaBbCdDe',
             'ans': {'A': 0, 'B': 4, 'C': 6, 'D': 8, 'a': 1, 'b': 5, 'd': 7}
         },
+        13: { # Teste sem argumentos
+            'type': 'exception',
+            'exc-type': TypeError
+        },
     }
 
     # Estrutura que automaticamente faz os testes de acordo com os dados dos casos
