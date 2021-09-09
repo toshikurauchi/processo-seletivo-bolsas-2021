@@ -6,19 +6,20 @@ from solution import primeiras_ocorrencias
 # ------------------------------------------------------------------------
 
 # Definindos as fixtures dos nossos testes 
-# (ainda não sei se nesse caso irá ajudar muito, ma foi legal aprender) 
+# (ainda não sei se nesse caso irá ajudar muito, mas foi legal aprender para casos mais complexos) 
 
 @pytest.fixture
 def palavra_nula():
     return ''
 
 # ------------------------------------------------------------------------
-# >> REALIZANDO OS TESTES
+
+# Realizando os testes para diversos cenários
 
 # Testando solução com uma palavra curta + pytest.mark.parametrize
 @pytest.mark.parametrize('palavra_curta, saida_curta', [('olá', {'o': 0, 'l': 1, 'á': 2}), ('como', {'c': 0, 'o': 1, 'm': 2}), ('vai', {'v': 0, 'a': 1, 'i': 2})])
-def test_primeiras_ocorrencias_palavra_grande(palavra_grande, saida_curta):
-    assert primeiras_ocorrencias(palavra_grande) == saida_curta 
+def test_primeiras_ocorrencias_palavra_curta(palavra_curta, saida_curta):
+    assert primeiras_ocorrencias(palavra_curta) == saida_curta 
 
 # Testando solução com uma palavra muito grande + pytest.mark.parametrize
 @pytest.mark.parametrize('palavra_grande, saida_grande', [('pneumoultramicroscopicossilicovulcanoconiótico', {'p': 0, 'n': 1, 'e': 2, 'u': 3, 'm': 4, 'o': 5, 'l': 7, 't': 8, 'r': 9, 'a': 10, 'i': 12, 'c': 13, 's': 16, 'v': 30, 'ó': 41}),  ('antoniamartinsrodriguesdasilvajunior', {'a': 0, 'n': 1, 't': 2, 'o': 3, 'i': 5, 'm': 7, 'r': 9, 's': 13, 'd': 16, 'g': 19, 'u': 20, 'e': 21, 'l': 27, 'v': 28, 'j': 30}), ('testeissoehumtestetabelezanice', {'t': 0, 'e': 1, 's': 2, 'i': 5, 'o': 8, 'h': 10, 'u': 11, 'm': 12, 'a': 19, 'b': 20, 'l': 22, 'z': 24, 'n': 26, 'c': 28})])
