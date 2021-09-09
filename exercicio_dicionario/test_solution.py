@@ -20,6 +20,13 @@ class TestExercicioDicionario():
         response = primeiras_ocorrencias(string_test)
         expected = {'u':0}
         assert response == expected
+    
+    # Teste para string vazia
+    def test_string_vazia(self):
+        string_test = ''
+        response = primeiras_ocorrencias(string_test)
+        expected = {}
+        assert response == expected
 
     # Teste para string com um único caractere
     def test_unico_caractere(self):
