@@ -6,7 +6,7 @@ from solution import primeiras_ocorrencias
 # ------------------------------------------------------------------------
 
 # Definindos as fixtures dos nossos testes 
-# (ainda não sei se nesse caso irá ajudar muito, mas foi legal aprender para casos mais complexos) 
+# (ainda não sei se nesse caso irá ajudar muito, mas foi legal aprender para implementar em casos mais complexos) 
 
 @pytest.fixture
 def palavra_nula():
