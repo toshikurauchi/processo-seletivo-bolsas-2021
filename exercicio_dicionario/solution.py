@@ -8,6 +8,3 @@ def primeiras_ocorrencias(palavra):
             ocorrencias[caractere] = i
             
     return ocorrencias
-
-# palavra = 214432423
-# print(primeiras_ocorrencias(palavra))
