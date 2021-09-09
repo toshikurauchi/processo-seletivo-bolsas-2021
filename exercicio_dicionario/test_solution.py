@@ -66,7 +66,7 @@ def teste_ocorrencias():
             'arg': 128175189259043,
             'exc-type': TypeError
         },
-        9: { # Caso onde uma lista e passado, esperace um tratamento sobre? Partirei do pressuposto que não
+        9: { # Caso onde uma lista e passado, espera-se um tratamento sobre? Partirei do pressuposto que não.
             'type': 'equals',
             'arg': [1, 2, 3, 3, 2, 1],
             'ans': {1: 0, 2: 1, 3: 2}
@@ -93,6 +93,7 @@ def teste_ocorrencias():
     }
 
     # Estrutura que automaticamente faz os testes de acordo com os dados dos casos
+    # *** É fácil adicionar novos tipos de testes, um elif resolve o problema ***
     for i in range(1, len(casos)):
         if casos[i]['type'] == 'equals':
             assert (primeiras_ocorrencias(casos[i]['arg']) == casos[i]['ans'])
