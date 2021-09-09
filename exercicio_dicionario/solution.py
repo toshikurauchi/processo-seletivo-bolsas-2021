@@ -1,16 +1,13 @@
 def primeiras_ocorrencias(palavra):
-    try: 
-        ocorrencias = {}
 
-        for i in range(len(palavra)):
-            caractere = palavra[i]
-            if caractere not in ocorrencias:
-                ocorrencias[caractere] = i
-                
-        return ocorrencias
+    ocorrencias = {}
 
-    except:
-        return None
+    for i in range(len(palavra)):
+        caractere = palavra[i]
+        if caractere not in ocorrencias:
+            ocorrencias[caractere] = i
+            
+    return ocorrencias
 
-palavra = 214432423
-print(primeiras_ocorrencias(palavra))
+# palavra = 214432423
+# print(primeiras_ocorrencias(palavra))
