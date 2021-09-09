@@ -1,5 +1,66 @@
+from typing import Type
 from solution import primeiras_ocorrencias
 import pytest
+
+class TesteOcorrencias:
+    def teste_basico0(self):
+        arg = 'abracadabra'
+        ans = {'a': 0, 'b': 1, 'r': 2, 'c': 4, 'd': 6}
+        assert primeiras_ocorrencias(arg) == ans
+
+    def teste_basico1(self):
+        arg = 'AaAaBbCdDe'
+        ans = {'A': 0, 'a': 1, 'B': 4, 'b': 5, 'C': 6, 'd': 7, 'D': 8, 'e': 9}
+        assert primeiras_ocorrencias(arg) == ans
+
+    def teste_basico2(self):
+        arg = '.!@#$)(%$#$'
+        ans = {'.': 0, '!': 1, '@': 2, '#': 3, '$': 4, ')': 5, '(': 6, '%': 7}
+        assert primeiras_ocorrencias(arg) == ans
+    
+    def teste_basico3(self):
+        arg = 'certa vez, eu vi algo de muito longe.'
+        ans = {'c': 0, 'e': 1, 'r': 2, 't': 3, 'a': 4, ' ': 5, 'v': 6, 'z': 8, ',': 9,
+               'u': 12, 'i': 15, 'l': 18, 'g': 19, 'o': 20, 'd': 22, 'm': 25, 'n': 33,
+               '.': 36}
+        assert primeiras_ocorrencias(arg) == ans
+
+    def teste_basico4(self):
+        arg = 'abracadabra',
+        ans = {'a': 3, 'b': 1, 'r': 2, 'c': 4, 'd': 6}
+        assert primeiras_ocorrencias(arg) != ans
+
+    def teste_basico5(self):
+        arg = 'AaAaBbCdDe',
+        ans = {'A': 0, 'B': 4, 'C': 6, 'D': 8, 'a': 1, 'b': 5, 'd': 7}
+        assert primeiras_ocorrencias(arg) != ans
+
+    def teste_especial_lista(self):
+        arg = [1, 2, 3, 3, 2, 1]
+        ans = {1: 0, 2: 1, 3: 2}
+        assert primeiras_ocorrencias(arg) == ans
+    
+    def teste_especial_tupla(self):
+        arg = (1, 2, 3, 3, 2, 1)
+        ans = {1: 0, 2: 1, 3: 2}
+        assert primeiras_ocorrencias(arg) == ans
+
+    def teste_especial_inteiro(self):
+        arg = 112359815
+        pytest.raises(TypeError, primeiras_ocorrencias, arg)
+
+    def teste_especial_vazio(self):
+        arg = ''
+        ans = {}
+        assert primeiras_ocorrencias(arg) == ans
+
+    def teste_especial_sem_argumentos(self):
+        pytest.raises(TypeError, primeiras_ocorrencias)
+    
+    def teste_especial_dois_argumentos(self):
+        arg1 = 1
+        arg2 = [0, 3, 6]
+        pytest.raises(TypeError, primeiras_ocorrencias, arg1, arg2)
 
 def teste_ocorrencias():
 
