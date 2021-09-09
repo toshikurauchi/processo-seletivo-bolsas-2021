@@ -80,7 +80,12 @@ def test_answer():
             'type': 'equals',
             'arg': (1, 2, 3, 3, 2, 1),
             'ans': {1: 0, 2: 1, 3: 2}
-        }
+        },
+        12: { # Teste redundante, mas é feito mesmo assim
+            'type': 'nequals', 
+            'arg': 'AaAaBbCdDe',
+            'ans': {'A': 0, 'B': 4, 'C': 6, 'D': 8, 'a': 1, 'b': 5, 'd': 7}
+        },
     }
 
     # Estrutura que automaticamente faz os testes de acordo com os dados dos casos
