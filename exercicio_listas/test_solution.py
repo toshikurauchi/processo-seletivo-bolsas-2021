@@ -31,12 +31,3 @@ def test_l2_repetida():
 # teste com a lista l1 e l2 muito grandes e com valores repetidos
 def test_l1_l2_grande():
     assert subtracao_de_listas(['batatman', 6,7,899999,85069,456806,'ahdsdaofew','jauispaliasdfrs','batatman', 6,7,899999,85069,456806,'ahdsdaofew','jauispaliasdfrs','batatman', 6,7,899999,85069,456806,'ahdsdaofew','jauispaliasdfrs','batatman', 6,7,899999,85069,456806,'ahdsdaofew','jauispaliasdfrs'],['bizarro', 'green', 'arrow', 'green','batatman', 6,7,899999,85069,456806,'ahdsdaofew','jauispaliasdfrs','batatman', 6,7,899999,85069,456806,'ahdsdaofew','jauispaliasdfrs']) == []
-
-# teste com entrada de valores de tipo diferente de list (strings)
-def test_not_list():
-    assert subtracao_de_listas('the joke is on you','Hasta la vista, baby') == []
-
-
-# teste com entrada de valor de tipo diferente de list (str) e valor list
-def test_not_list_mixed_w_list():
-    assert subtracao_de_listas('Ezequiel 25:17',["Gotta catch 'em all"]) == []
