@@ -4,6 +4,8 @@ def test_dict_keys(entrada):
     # verificar se as chaves retornadas pela função são válidas
 
     response = primeiras_ocorrencias(entrada)
+    assert type(response) == dict                       # verifica se o retorno é um dicionário
+
     for key in response.keys():
         assert len(key) == 1                            # verifica se a chave não é um único carácter
         assert key.isalpha()                            # verifica se é uma letra
@@ -11,9 +13,10 @@ def test_dict_keys(entrada):
 def test_dict_values(entrada):
     # verifica se os valores são válidos
     
-    response = primeiras_ocorrencias(entrada)
+    response = primeiras_ocorrencias(entrada)           # não precisamos verificar se o retorno é um dicionário aqui, pois já o fizemos em uma chamada anterior
+
     for value in response.values():
-        assert type(value) == int or type(value) == str
+        assert type(value) == int or type(value) == str 
 
         if type(value) == str:                          # caso o retorno seja em string
             assert value.isnumeric()                    # verifica se só recebemos números
