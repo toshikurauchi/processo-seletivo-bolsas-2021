@@ -1,19 +1,22 @@
 from solution import primeiras_ocorrencias
 
-def test_dict_keys(input):
+def test_dict_keys():
     # verificar se as chaves retornadas pela função são válidas
 
-    response = primeiras_ocorrencias(input)
+    entrada = 'abracadabra'
+    response = primeiras_ocorrencias(entrada)
     assert type(response) == dict                       # verifica se o retorno é um dicionário
 
     for key in response.keys():
         assert len(key) == 1                            # verifica se a chave não é um único carácter
         assert key.isalpha()                            # verifica se é uma letra
 
-def test_dict_values(input):
+def test_dict_values():
     # verifica se os valores são válidos
     
-    response = primeiras_ocorrencias(input)           # não precisamos verificar se o retorno é um dicionário aqui, pois já o fizemos em uma chamada anterior
+    entrada = 'abracadabra'
+    response = primeiras_ocorrencias(entrada)
+    assert type(response) == dict                       # verifica se o retorno é um dicionário
 
     for value in response.values():
         assert type(value) == int or type(value) == str 
@@ -22,7 +25,7 @@ def test_dict_values(input):
             assert value.isnumeric()                    # verifica se só recebemos números
             assert len(value) < 3 and len(value) > 0    # verifica se o tamanho do retorno é razoável
 
-def solution(palavra):
+def correct_answer(palavra):
     ocorrencias = {}
 
     for i in range(len(palavra)):
@@ -32,13 +35,8 @@ def solution(palavra):
 
     return ocorrencias
 
-def test_correct_answer(input):
+def test_correct_answer():
     # verificamos se a resposta é a esperada
 
-    assert primeiras_ocorrencias(input) == solution(input)
-
-input = 'abracadabra'
-
-test_dict_keys(input)        # validamos as chaves
-test_dict_values(input)      # validamos os valores
-test_correct_answer(input)   # validamos a resposta
+    entrada = 'abracadabra'
+    assert primeiras_ocorrencias(entrada) == correct_answer(entrada)
