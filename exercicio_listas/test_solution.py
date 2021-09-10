@@ -22,7 +22,7 @@ def test_inverteuInput():
     lista2 = [2, 'banana', 'carro']
     resultado = subtracao_de_listas(lista2, lista1)
     resposta = solucao(lista2, lista1)
-    assert resultado == resposta, f"Erro as entradas foram invertidas."
+    assert resultado != resposta, f"Erro as entradas foram invertidas."
 
 def test_lista1Vazia():
     lista1 = []
