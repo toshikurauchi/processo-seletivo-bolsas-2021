@@ -1,6 +1,16 @@
 from solution import primeiras_ocorrencias
 
 try:
+    def teste0():
+        # Verifica a função para strings vazias
+        
+        string = ""
+        expected = {}
+        teste = primeiras_ocorrencias(string)
+        print("\nDica:")
+        print("Verifique se sua função percorre toda a string!\n")
+        assert teste==expected
+
     def teste1():
         # Verifica se a função, com sucesso, determina o índice correto para a última letra, se 
         # essa for sua primeira ocorrência. O Erro comum aqui é talvez o código do aluno não esteja percorrendo
