@@ -1,9 +1,15 @@
 def primeiras_ocorrencias(palavra):
-    ocorrencias = {}
+    if type(palavra) == str:
+        ocorrencias = {}
 
-    for i in range(len(palavra)):
-        caractere = palavra[i]
-        if caractere not in ocorrencias:
-            ocorrencias[caractere] = i
+        for i in range(len(palavra)):
+            caractere = palavra[i]
+            if caractere not in ocorrencias:
+                ocorrencias[caractere] = i
 
-    return ocorrencias
+        return ocorrencias
+    else:
+        return "A entrada não foi uma string"
+    
+    
+
