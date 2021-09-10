@@ -3,12 +3,12 @@ from solution import primeiras_ocorrencias
 try:
     def teste0():
         # Verifica a função para strings vazias
-        
+
         string = ""
         expected = {}
         teste = primeiras_ocorrencias(string)
         print("\nDica:")
-        print("Verifique se sua função percorre toda a string!\n")
+        print("Sua função não parece funcionar para strings vazias\n")
         assert teste==expected
 
     def teste1():
