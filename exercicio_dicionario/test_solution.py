@@ -43,3 +43,9 @@ class TestSolution:
         response = primeiras_ocorrencias(entry)
         hit = {'a': 0, 's': 1, 'd': 2, ' ': 3, 'f': 5, 'g': 6, 'h': 7}
         assert hit == response
+
+    def test_caps_and_lower(self):
+        entry = 'APaadpPOE'
+        response = primeiras_ocorrencias(entry)
+        hit = {'A': 0, 'P': 1, 'a': 2, 'p': 5, 'd': 4, 'O': 7, 'E': 8}
+        assert hit == response
