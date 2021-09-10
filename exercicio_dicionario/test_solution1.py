@@ -6,11 +6,19 @@ from solution import primeiras_ocorrencias
 # Teste com parametrize misturando letras maísculas com minúsculas
 @pytest.mark.parametrize("palavra , dicionario",
 [("palavra",{"p":0,"a":1,"l":2,"v":4,"r":5}),
- ("PaLAVra",{"P":0,"a":1,"L":2,"A":3,"V":4,"r":5})
+ ("PaLAVra",{"P":0,"a":1,"L":2,"A":3,"V":4,"r":5}),
+ (31458 , "erro" ),
+ ([1,2,3,4,5],"erro"),
+ (["banana","aquele","teste"],"error"),
+ ("compartimentalização",{'c': 0, 'o': 1, 'm': 2, 'p': 3, 'a': 4, 'r': 5, 't': 6, 'i': 7, 'e': 9, 'n': 10, 'l': 13, 'z': 15, 'ç': 17, 'ã': 
+18} )
 ])
 
 def test_func(palavra,dicionario):
-    assert primeiras_ocorrencias(palavra) == dicionario
+    if type(palavra) == str:
+        assert primeiras_ocorrencias(palavra) == dicionario
+    else:
+        TypeError ("A entrada não foi uma string")
 
 #Teste com palavras Maiores
 def test_palavras_maiores():
@@ -18,6 +26,6 @@ def test_palavras_maiores():
     assert primeiras_ocorrencias(palavra) == {'c': 0, 'o': 1, 'm': 2, 'p': 3, 'a': 4, 'r': 5, 't': 6, 'i': 7, 'e': 9, 'n': 10, 'l': 13, 'z': 15, 'ç': 17, 'ã': 
 18}
 
-def test_n_string():
-    palavra = 31459
-    assert primeiras_ocorrencias(palavra) == "A entrada não foi uma string"
+# def test_n_string():
+#     palavra = 31459
+#     assert primeiras_ocorrencias(palavra) == "A entrada não foi uma string"
