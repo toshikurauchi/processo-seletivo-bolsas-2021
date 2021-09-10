@@ -30,13 +30,6 @@ def test_primeiras_ocorrencias_palavra_grande(palavra_grande, saida_grande):
 @pytest.mark.parametrize('frase, saida_frase', [('Olá, como vai?', {'O': 0, 'l': 1, 'á': 2, ',': 3, ' ': 4, 'c': 5, 'o': 6, 'm': 7, 'v': 10, 'a': 11, 'i': 12, '?': 13}), ('Eu vou indo, e você, tudo bem?', {'E': 0, 'u': 1, ' ': 2, 'v': 3, 'o': 4, 'i': 7, 'n': 8, 'd': 9, ',': 11, 'e': 13, 'c': 17, 'ê': 18, 't': 21, 'b': 26, 'm': 28, '?': 29}), ('Tudo bem, eu vou indo correndo', {'T': 0, 'u': 1, 'd': 2, 'o': 3, ' ': 4, 'b': 5, 'e': 6, 'm': 7, ',': 8, 'v': 13, 'i': 17, 'n': 18, 'c': 22, 'r': 24})])
 def test_primeiras_ocorrencias_frase(frase, saida_frase):
     assert primeiras_ocorrencias(frase) == saida_frase
-
-# Testando solução com alguma coisa que não seja uma String (FIXME: Está dando certo) + pytest.mark.parametrize
-@pytest.mark.parametrize('notString, saida_notString', [(123456, TypeError), (True, TypeError), (False, TypeError), (0x12AF, TypeError), (0b101111, TypeError)])
-def test_primeiras_ocorrencias_notString(notString, saida_notString):
-    if not isinstance(notString, six.string_types):
-        with pytest.raises(saida_notString):
-            primeiras_ocorrencias(notString)
         
 # Testando solução nula + fixtures
 def test_primeiras_ocorrencias_nulo(palavra_nula):
