@@ -82,17 +82,27 @@ def test_subtracao_de_listas_nequal_type(lista1, lista2, result):
 # testes relativos a exceções
 
 
-@pytest.mark.parametrize("lista1, lista2, type", [
+@pytest.mark.parametrize("lista1, lista2", [
     [
         '2, 7, 3.1, banana',
-        [2, 'banana', 'carro'],
-        TypeError
+        [2, 'banana', 'carro']
     ],
     [
         [2, 'banana', 'carro'],
+        None
+    ],
+    [
         None,
-        TypeError
+        None
     ]
 ])
-def test_subtracao_de_listas_exception_type(lista1, lista2, type):
-    pytest.raises(type, subtracao_de_listas, (lista1, lista2))
+def test_subtracao_de_listas_type_error(lista1, lista2):
+    if(lista2 is None):
+        # simulando caso em que não é passado um ou os dois argumentos
+
+        if(lista1 is None):
+            pytest.raises(TypeError, subtracao_de_listas)
+        else:
+            pytest.raises(TypeError, subtracao_de_listas, lista1)
+    else:
+        pytest.raises(TypeError, subtracao_de_listas, (lista1, lista2))
