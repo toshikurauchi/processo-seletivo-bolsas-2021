@@ -16,3 +16,7 @@ def test_abracadabra():
 
 def test_iiiiiiiiiiiiiiiiiha():
     assert primeiras_ocorrencias('iiiiiiiiiiiiiiiiiha') == {'i': 0, 'h': 17, 'a': 18}
+
+
+def test_caracteres_especiais():
+    assert primeiras_ocorrencias('!@!@#$%!@#$%^') == {'!': 0, '@': 1, '#': 4, '$': 5, '%': 6, '^': 12}
