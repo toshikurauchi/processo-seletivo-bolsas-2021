@@ -1,6 +1,6 @@
 from solution import subtracao_de_listas
 
-def solution(lista1, lista2):
+def correct_answer(lista1, lista2):
     resposta = []
 
     for elemento in lista1:
@@ -9,22 +9,19 @@ def solution(lista1, lista2):
 
     return resposta
 
-def test_return_types(input1, input2):
+def test_return_types():
     # verifica se o tipo de retorno da resposta é o esperado
 
-    response = subtracao_de_listas(input1, input2)
+    entrada1 = [2, 7, 3.1, 'banana']; entrada2 = [2, 'banana', 'carro']
+    response = subtracao_de_listas(entrada1, entrada2)
 
     assert type(response) == list       # verifica se recebemos uma lista
     assert len(response) > 0            # verifica se a lista não esta vazia
 
-def test_correct_answer(input1, input2):
+def test_correct_answer():
     # verifica se a resposta esta correta
 
-    response = subtracao_de_listas(input1, input2)
+    entrada1 = [2, 7, 3.1, 'banana']; entrada2 = [2, 'banana', 'carro']
+    response = subtracao_de_listas(entrada1, entrada2)
     
-    assert response == solution(input1, input2)
-
-input1 = [2, 7, 3.1, 'banana']; input2 = [2, 'banana', 'carro']
-
-test_return_types(input1, input2)       # validamos o tipo de retorno da resposta
-test_correct_answer(input1, input2)     # verificamos se a resposta esta correta
+    assert response == correct_answer(entrada1, entrada2)
