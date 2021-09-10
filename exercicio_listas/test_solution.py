@@ -19,13 +19,15 @@ def test_lista1Vazia():
     lista1 = []
     lista2 = ['banana', 'sundae']
     resultado = subtracao_de_listas(lista1, lista2)
-    assert resultado == lista1, f"Erro quando a primeira lista estava vazia era esperado {lista1}, mas foi devolvido {resultado}."
+    resposta = lista1
+    assert resultado == resposta, f"Erro quando a primeira lista estava vazia era esperado {lista1}, mas foi devolvido {resultado}."
 
 def test_lista2Vazia():
     lista1 = ['banana', 'sundae']
     lista2 = []
     resultado = subtracao_de_listas(lista1, lista2)
-    assert resultado == lista1, f"Erro quando a segunda lista estava vazia era esperado {lista1}, mas foi devolvido {resultado}."
+    resposta = lista1
+    assert resultado == resposta, f"Erro quando a segunda lista estava vazia era esperado {lista1}, mas foi devolvido {resultado}."
 
 def test_lista1Menor():
     lista1 = ['banana', 'sundae', 'chocolate']
