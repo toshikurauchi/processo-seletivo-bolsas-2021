@@ -1,6 +1,6 @@
-<div style="font-size: 2rem; color: red; text-transform: uppercase">
-Este processo já foi concluído. Obrigado pelo seu interesse!
-</div>
+```diff
+- Este processo já foi concluído. Obrigado pelo seu interesse!
+```
 
 
 # Processo Seletivo para a bolsa de migração de conteúdo de Design de Software
@@ -10,8 +10,6 @@ Primeiramente, muito obrigado pelo seu interesse em trabalhar conosco na migraç
 O objetivo deste processo seletivo é simular o trabalho que você realizará caso seja selecionado(a).
 
 O processo consiste nas fases descritas abaixo. Não há uma data limite para a entrega, mas seguiremos a ordem de chegada. Ou seja, os primeiros que concluírem satisfatoriamente todos os passos receberão a bolsa. Enviaremos um aviso quando todas as vagas forem preenchidas.
-
-<div style="text-decoration: line-through;">
 
 ## 1. Aprendendo a utilizar o pytest
 
@@ -38,8 +36,6 @@ Algumas dicas:
 Realize o pull request e fique atento às notificações do GitHub. Nós vamos interagir por lá. Pode ser necessário realizar algumas modificações no seu código. Nós faremos essa solicitação pelo próprio GitHub.
 
 Esse é um processo iterativo, então não se preocupe se pedirmos para você mudar ou implementar algo. Faz parte do processo. Queremos simular o processo real que utilizaremos durante o trabalho.
-
-</div>
 
 ## 5. Quando estivermos satisfeitos com a sua submissão você será chamado(a) para uma conversa com os professores
 
