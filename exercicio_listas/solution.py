@@ -6,6 +6,7 @@ def subtracao_de_listas(lista1, lista2):
             resposta.append(elemento)
 
     return resposta
+
 #verifica lista_1 e lista_2
 lista_1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 lista_2 = [0, 2, 4, 6, 8]
@@ -48,7 +49,22 @@ lista_name_final = ['QuéziaMoura']
 def test_subtracao_de_listas():
     assert lista_name_final == subtracao_de_listas(lista_name, lista_name_bigger)
 
+#verifica lista_variaveis e lista_variaveis_variadas
+lista_variaveis = ['2', '4']
+lista_variaveis_variadas = ['1', 2, '3', 4]
+lista_variaveis_final = [2, 4]
 
 
+def test_subtracao_de_listas():
+    assert variaveis_final == subtracao_de_listas(lista_variaveis, lista_variaveis_variadas)
+    
+#verifica lista_numeros_inteiros e lista_numeros_reais
+lista_numeros_inteiros = [1, 2, 3, 4, 5]
+lista_numeros_reais = [1.0, 2.0, 3.0, 4.0]
+lista_numeros_finais = [5]
+
+
+def test_subtracao_de_listas():
+    assert lista_numeros_finais == subtracao_de_listas(lista_numeros_inteiros, lista_numeros_reais)
     
 
