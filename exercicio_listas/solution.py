@@ -13,7 +13,42 @@ lista_3 = [1, 3, 5, 7, 9]
 
 def test_subtracao_de_listas():
     assert lista_3 == subtracao_de_listas(lista_1, lista_2)
-#verifica lis
-lista_Maiusculo = ['A', 'B', 'C', 'D', 'E']
+
+#verifica lista_Maiuscula e lista_letras
+lista_Maiuscula = ['A', 'B', 'C', 'D', 'E']
 lista_letras = ['A', 'b', 'c', 'D', 'E']
-lista_letras_novas = ['b', 'c']
+lista_letras_novas = ['B', 'C']
+
+def test_subtracao_de_listas():
+    assert lista_letras_novas == subtracao_de_listas(lista_Maiuscula, lista_letras)
+
+#verifica lista_anime e lista_fa
+lista_anime = ['Naruto', 'Dragon Ball', 'Bleach', 'Jujutsu Kaisen', 'Kimetsu no Aiba']
+lista_fa = ['Naruto', 'Dragon Ball', 'Jujutsu Kaisen']
+lista_anime_final = ['bleach', 'kimetsu no aiba']
+
+def test_subtracao_de_listas():
+    assert lista_anime_final == subtracao_de_listas(lista_anime, lista_fa)
+
+#verifica lista_nome e lista_nome_maior
+
+lista_nome = ['Quézia Moura', 'Kevin Shinohara', 'Cleilton Sousa']
+lista_nome_maior = ['Kevin Shinohara', 'Cleilton Sousa']
+lista_nome_final = ['Quezia Moura']
+
+def test_subtracao_de_listas():
+    assert lista_nome_final == subtracao_de_listas(lista_nome, lista_nome_maior)
+
+#verifica lista_name e lista_name_maior
+
+lista_name = ['Quézia Moura', 'Kevin Shinohara', 'Cleilton Sousa']
+lista_name_bigger = ['Kevin Shinohara', 'Cleilton Sousa']
+lista_name_final = ['QuéziaMoura']
+
+def test_subtracao_de_listas():
+    assert lista_name_final == subtracao_de_listas(lista_name, lista_name_bigger)
+
+
+
+    
+
