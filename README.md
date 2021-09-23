@@ -1,8 +1,3 @@
-```diff
-- Este processo já foi concluído. Obrigado pelo seu interesse!
-```
-
-
 # Processo Seletivo para a bolsa de migração de conteúdo de Design de Software
 
 Primeiramente, muito obrigado pelo seu interesse em trabalhar conosco na migração do conteúdo de Design de Software.
@@ -44,4 +39,3 @@ Esta será a última etapa. Nessa conversa vamos explicar melhor o que esperamos
 Boa sorte!
 
 Andrew (Toshi) Kurauchi e Igor Montagner
-
