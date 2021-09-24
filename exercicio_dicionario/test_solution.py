@@ -9,7 +9,7 @@ def test_string_com_caracter_especial(self):
 def test_string_com_letras_maiusculas_e_minusculas (self):
     assert primeiras_ocorrencias('BaNAna') == {'B':0, 'a':1, 'N':2, 'A':3, 'n':4}
 
-def test_string_com_espaço_e_caracteres_repetidos(self):
+def test_string_com_espaco_e_caracteres_repetidos(self):
     assert primeiras_ocorrencias('          teste') == {' ':0, 't': 10, 'e': 11, 's':12}
 
 def test_string_com_caracteres_especiais (self):
