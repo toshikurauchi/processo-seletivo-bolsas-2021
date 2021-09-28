@@ -1,3 +1,7 @@
+```diff
+- Este processo já foi concluído. Obrigado pelo seu interesse!
+```
+
 # Processo Seletivo para a bolsa de migração de conteúdo de Design de Software
 
 Primeiramente, muito obrigado pelo seu interesse em trabalhar conosco na migração do conteúdo de Design de Software.
